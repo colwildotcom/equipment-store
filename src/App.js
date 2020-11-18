@@ -4,6 +4,8 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./components/Navbar";
 import ProductList from "./components/ProductList";
+import OrderList from "./components/OrderList";
+import CustomerList from "./components/CustomerList";
 import Details from "./components/Details";
 import Cart from "./components/Cart";
 import Default from "./components/Default";
@@ -16,6 +18,8 @@ class App extends Component {
         <Navbar />
         <Switch>
           <Route exact path="/" component={ProductList}></Route>
+          <Route path="/orders" component={OrderList}></Route>
+          <Route path="/customers" component={CustomerList}></Route>
           <Route path="/details" component={Details}></Route>
           <Route path="/cart" component={Cart}></Route>
           <Route component={Default}></Route>
